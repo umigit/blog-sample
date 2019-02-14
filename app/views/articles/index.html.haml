@@ -1,18 +1,7 @@
-%nav.navbar.navbar-expand-sm.navbar-dark.bg-primary.sticy-top
-  %a.navbar-brand{href: root_path} BLOG
-  %button.navbar-toggler{"data-toglle": "collapse", "data-target": "#navbarResponsive", type: "button", "aria-controls": "navbarResponsive", "aria-expanded": false, "aria-label": "Toggle navigation"}
-    %span.navbar-toggler-icon
-  .collapse.navbar-collapse#navbarResponsive.justify-content-end
-    %ul.navbar-nav.ml-auto
-      %li.nav-item.active
-        = link_to "新規登録", new_user_registration_path, class: "nav-link", "data-toggle":"collapse", "data-target": ".navbar-collapse.show"
-      %li.nav-item
-        = link_to "ログイン", root_path, class: "nav-link", "data-toggle":"collapse", "data-target": ".navbar-collapse.show"
-      %li.nav-item
 .container
   .row
-    .col-lg-12
-      %h2 Contents
-      .articles.bs-component
-        - if @articles
-          = render @articles
+    .col-lg-2
+    .col-lg-8
+      %h2.mt-5 Contents
+      = render @articles
+    .col-lg-2
