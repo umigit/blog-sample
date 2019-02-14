@@ -40,6 +40,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-rails'
+  gem 'pry-byebug'
 end
 
 group :development do
@@ -65,3 +66,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
 gem 'haml-rails'
+gem 'popper_js', '~> 1.14.5'
+gem "bootswatch", github: "thomaspark/bootswatch"
+gem 'autoprefixer-rails'
