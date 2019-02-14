@@ -69,3 +69,4 @@ gem 'haml-rails'
 gem 'popper_js', '~> 1.14.5'
 gem "bootswatch", github: "thomaspark/bootswatch"
 gem 'autoprefixer-rails'
+gem 'devise'
