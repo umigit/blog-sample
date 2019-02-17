@@ -1,10 +1,12 @@
+= render "/layouts/navbar"
 .container
-  .card.mt-5
-    .card-body
-      %h2 New Article
-      = form_for @article do |f|
-        = f.label :title
-        = f.text_field :title, class: "form-control mb-3"
-        = f.label :text
-        = f.text_area :text, class: "form-control mb-3", rows: 10
-        = f.submit "Send", class: "btn btn-primary btn-block"
+  .row
+    .card.col-lg-8.mx-auto.my-3
+      .card-body
+        %h2 New Article
+        = form_for @article do |f|
+          = f.label :title
+          = f.text_field :title, class: "form-control mb-3"
+          = f.label :text
+          = f.text_area :text, class: "form-control mb-3", rows: 10
+          = f.submit "Send", class: "btn btn-primary btn-block"

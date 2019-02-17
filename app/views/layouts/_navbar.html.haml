@@ -3,17 +3,18 @@
     %a.navbar-brand{href: root_path} BLOG
     %button.navbar-toggler{"aria-controls": "navbarResponsive", "aria-expanded": "false", "aria-label": "Toggle navigation", "data-target": "#navbarResponsive", "data-toggle": "collapse", type: "button"}
       %span.navbar-toggler-icon
-    #navbarResponsive.collapse.navbar-collapse
     - if user_signed_in?
-      %ul.navbar-nav.ml-auto
-        %li.nav-item
-          = link_to "ログアウト", destroy_user_session_path, class: "nav-link", method: :delete
-        %li.nav-item
-          = link_to "投稿", new_article_path, class: "nav-link"
+      #navbarResponsive.collapse.navbar-collapse
+        %ul.navbar-nav.ml-auto
+          %li.nav-item
+            = link_to "ログアウト", destroy_user_session_path, class: "nav-link", method: :delete
+          %li.nav-item
+            = link_to "投稿", new_article_path, class: "nav-link"
     - else
-      %ul.navbar-nav.ml-auto
-        %li.nav-item
-          = link_to "新規登録", new_user_registration_path, class: "nav-link"
-        %li.nav-item
-          = link_to "ログイン", new_user_session_path, class: "nav-link"
-.pt-5
+      #navbarResponsive.collapse.navbar-collapse
+        %ul.navbar-nav.ml-auto
+          %li.nav-item
+            = link_to "新規登録", new_user_registration_path, class: "nav-link"
+          %li.nav-item
+            = link_to "ログイン", new_user_session_path, class: "nav-link"
+.nav-margin-box.mb-3

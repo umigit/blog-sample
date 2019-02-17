@@ -1,17 +1,18 @@
+= render "/layouts/navbar"
 .container
   .row
-    .col-lg-1
-    .col-lg-10
-      .mb-5
-      .article
+    .col-lg-8.mx-auto
+      .article.my-32
         .card.border-primary.mb-3
           .card-body
             %h4.article__title.card-title= @article.title
-            .article-info.row
-              %h6.col-lg-8 author: #{@article.user.name}
-              %h6.col-lg-4.text-right #{@article.created_at.strftime("%Y年 %m月 %d日")}
-            %p.article__text.card-text= @article.text
-            = link_to "詳細", article_path(@article), class: "card-link"
+            %h6 投稿者: #{@article.user.name}
+            %hr
+            %h6 #{@article.created_at.strftime("%Y年 %m月 %d日")}
+            %hr
+            %p.card-text= @article.text
             - if user_signed_in? && current_user.id == @article.user_id
               = link_to "編集", edit_article_path(@article), class: "card-link"
               = link_to "削除", "/articles/#{@article.id}", method: :delete, class: "card-link"
+
+      = render "comment"
